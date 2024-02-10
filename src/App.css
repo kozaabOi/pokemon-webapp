@@ -1,0 +1,396 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main{
+  min-height: 100vh;
+}
+
+main.register{
+  background: linear-gradient(45deg, white, black);
+}
+
+main.about{
+  background-image: url("../images/under_construction.jpg");
+  background-size:contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+}
+
+main.arena{
+  background-image: url("../images/arena.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+main.pokebase{
+  background: linear-gradient(to left,white, black);
+}
+
+#root > main > div > main{
+  max-height: 100%;
+}
+
+/* Looser h1 */
+#root > main > div.location-container > div:nth-child(4) > div > div > h1 {
+  display: flex;
+  justify-content: center;
+}
+
+/* fight button */
+#root > main > div > div:nth-child(3) > button {
+  display: flex;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 20px;
+  border: 2px solid #000000;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 16px;
+  backdrop-filter: blur(5.1px);
+  text-shadow: 3px 3px 10px #000;
+  transform: translateX(3px);
+}
+
+/* fight button hover */
+#root > main > div > div:nth-child(3) > button {
+  background-color: rgba(48, 44, 44, 0.5);
+}
+
+/* logout button */
+#root > main > div.navigation-bar > header > button {
+  padding: 20px;
+  border: 2px solid #000000;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 16px;
+  backdrop-filter: blur(5.1px);
+  text-shadow: 3px 3px 10px #000;
+  font-size: 16px;
+  transform: translateX(3px);
+}
+
+/* logout button hover */
+#root > main > div.navigation-bar > header > button:hover {
+  background-color: rgba(48, 44, 44, 0.5);
+}
+
+.back-button{
+  padding: 20px;
+  border: 2px solid #000000;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 16px;
+  backdrop-filter: blur(5.1px);
+  text-shadow: 3px 3px 10px #000;
+  font-size: 17px;
+  transform: translateX(3px);
+}
+
+.back-button:hover{
+  background-color: rgba(48, 44, 44, 0.5);
+}
+
+.location:hover {
+  transform: translateX(5px);
+}
+
+.navigation-bar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px
+}
+
+.arena-container{
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+}
+.fighters{
+  position: absolute;
+  bottom: 300px;
+  display: flex;
+  flex-direction: row;
+  gap:10px;
+}
+
+.collection{
+  overflow: auto;
+  position: relative;
+  left: -700px;
+  bottom: -305px;
+  height:300px;
+  min-width: 160px
+}
+
+.collection::-webkit-scrollbar {
+  width: 8px; /* A görgető szélessége */
+}
+
+.collection::-webkit-scrollbar-thumb {
+  background-color: #ce9e50; /* A görgető hüvely színe */
+  border-radius: 6px; /* A görgető hüvely kerekítése */
+}
+
+.collection::-webkit-scrollbar-track {
+  background-color: #e4cfa9; /* A görgető háttérszíne */
+}
+
+.image{
+  image-rendering: pixelated
+}
+
+.location-container {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
+}
+
+.locations{
+  color: #fff;
+  font-size: 20px;  
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 51px;
+  width: 60%;
+}
+
+.pokemons{
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 10px;
+
+  background: rgba(255, 255, 255, 0);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.1px);
+}
+
+header a {
+  font-size: 20px;
+  padding: 20px;
+  color: #000000;
+  text-decoration: unset;
+  transition: all 1s ease
+}
+
+header a:hover {
+  transform: translateX(3px);
+  text-decoration: underline;
+  text-shadow: 3px 3px 10px #000;
+}
+
+main.arena div.location-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.canalave-city{
+  background-image: url("../images/Canalave_City_DP.png");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.eterna-city{
+  background-image: url("../images/Eterna_city.png");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.pastoria-city{
+  background-image: url("../images/Pastoria_city.png");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.sunyshore-city{
+  background-image: url("../images/Sunyshore_City_DP.png");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.sinnoh-pokemon-league{
+  background-image: url("../images/Sinnoh_PL.jpg");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.oreburgh-mine{
+  background-image: url("../images/Oreburgh_mine.png");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.valley-windworks{
+  background-image: url("../images/Valley_windworks.png");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.eterna-forest{
+  background-image: url("../images/Eterna_Forest_Exterior_DP.png");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.fuego-ironworks{
+  background-image: url("../images/Fuego_Ironworks.png");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.mt-coronet{
+  background-image: url("../images/Mt_coronet.png");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.great-marsh{
+  background-image: url("../images/Great_Marsh.png");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.solaceon-ruins{
+  background-image: url("../images/Solaceon_ruins.png");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.sinnoh-victory-road{
+  background-image: url("../images/Sinnoh_PL.jpg");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.ravaged-path{
+  background-image: url("../images/Ravaged_path.png");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.oreburgh-gate{
+  background-image: url("../images/Oreburgh_gate.png");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.stark-mountain{
+  background-image: url("../images/Stark_Mountain.png");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.spring-path{
+  background-image: url("../images/Spring_Path.png");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.turnback-cave{
+  background-image: url("../images/Turnback_Cave.png");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.snowpoint-temple{
+  background-image: url("../images/Snowpoint_temple.gif");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.wayward-cave{
+  background-image: url("../images/Wayward_cave.png");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.fight-button{
+  position: relative;
+  top: 220px
+}
+
+.shame{
+  position: relative;
+  top: 200px
+}
+
+.winner{
+  position: relative;
+  bottom:400px
+}
